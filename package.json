@@ -1,7 +1,7 @@
 {
   "name": "burger",
   "version": "1.0.0",
-  "description": "A Node/Express/Handlebars/MySQL Full Stack SPA for handling Hamburger orders.",
+  "description": "A Node/Express/Handlebars/Sequelize/MySQL Full Stack SPA for handling Hamburger orders.",
   "main": "server.js",
   "scripts": {
     "test": "localhost:3000"
