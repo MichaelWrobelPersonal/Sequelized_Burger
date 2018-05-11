@@ -37,6 +37,11 @@ img {
      clear: both;
 }
 
+.create-form {
+    float: left;
+}
+
+
 h1, h2, h3 {
        color: #4aaaa5;
        font-family: Georgia, Times, "Times New Roman", serif;
