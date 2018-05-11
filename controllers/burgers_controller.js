@@ -12,20 +12,25 @@ module.exports = function(app) {
     console.log("FindAll Burgers")
     console.log(req.body);
     // Return all entries for Burgers
-    db.Burgers.findAll({}).then(function(data) {
+    db.Burgers.findAll({raw: true}).then(function(result) {
       var hbsObject = {
-        Burgers: data
+        burgers: result
       };
      // Return the Burger(s) in handlebar block rendered format
     console.log('rendered Burger response:')
     console.log(hbsObject);
+    console.log(result);
     res.render("index", hbsObject);
-    });
+//    res.render('index',{ burgers: result });
+    }).catch(function(err) {
+      res.status(500).end();
+      console.log(err);
+    });;
   });
 
   // POST route for saving a new Burger.
   app.post("/api/burgers", function(req, res) {
-      console.log("Burger Create:")
+      console.log("Burger Create:");
       console.log(req.body);
       // Create the Burger
       db.Burgers.create({
@@ -34,6 +39,9 @@ module.exports = function(app) {
       }).then(function(result) {
       // Return the ID of the new Burger in JSON format
       res.json({ id: result.insertId });
+    }).catch(function(err) {
+      res.status(500).end();
+      console.log(err);
     });
   });
 
@@ -48,6 +56,9 @@ module.exports = function(app) {
       }
     }).then(function(dbBurger) {
     res.status(200).end(); // indicate sucessfull deletion
+    }).catch(function(err) {
+      res.status(500).end();
+      console.log(err);
     });
   });
 
@@ -64,6 +75,9 @@ module.exports = function(app) {
     }).then(function(result) {
        // Return the updated Burger in JSON format      
       res.json({ id: result.insertId });
+    }).catch(function(err) {
+      res.status(500).end();
+      console.log(err);
     });
   });
 }
