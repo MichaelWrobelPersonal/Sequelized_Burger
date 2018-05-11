@@ -1,7 +1,7 @@
 INSERT INTO `burgers` (`id`, `burger_name`, `devoured`)
 VALUES(
-	(1, 'SunnysideUp Burger', 0),
-	(2, 'Chedder Burger', 0),
-	(3, 'Garden Burger', 0),
-	(4, 'Coranary Burger', 0),
-	(5, 'Healthy Burger', 0));
+	(1, 'SunnysideUp Burger', 0, '2018-05-08 22:26:38', '2018-05-11 04:08:52' ),
+	(2, 'Chedder Burger', 0, '2018-05-09 02:44:57', '2018-05-11 04:08:48' ),
+	(3, 'Garden Burger', 0, '2018-05-11 03:16:52', '2018-05-11 04:10:22'  ),
+	(4, 'Coranary Burger', 0, '2018-05-11 04:11:17', '2018-05-11 04:12:45' ),
+	(5, 'Healthy Burger', 0, '2018-05-11 04:10:22', '2018-05-11 04:10:22' ));

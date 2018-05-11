@@ -19,9 +19,7 @@ module.exports = function(app) {
      // Return the Burger(s) in handlebar block rendered format
     console.log('rendered Burger response:')
     console.log(hbsObject);
-    console.log(result);
     res.render("index", hbsObject);
-//    res.render('index',{ burgers: result });
     }).catch(function(err) {
       res.status(500).end();
       console.log(err);
@@ -62,15 +60,15 @@ module.exports = function(app) {
     });
   });
 
-  // PUT route for updating todos. The updated todo will be available in req.body
-  app.put("/api/burgers", function(req, res) {
+  // PUT route for updating burgers. The updated todo will be available in req.body
+  app.put("/api/burgers/:id", function(req, res) {
     console.log("Burger Update:")
     console.log(req.body);
     db.Burgers.update({
       devoured: req.body.devoured
       }, {
       where: {
-        id: req.body.id
+        id: req.params.id
       }
     }).then(function(result) {
        // Return the updated Burger in JSON format      

@@ -1,7 +1,9 @@
-CREATE DATABASE burgers_db;
-CREATE TABLE `burgers` (
-  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
-  `burger_name` text NOT NULL,
+CREATE DATABASE hamburgers_db;
+CREATE TABLE `Burgers` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `burger_name` varchar(255) DEFAULT NULL,
   `devoured` tinyint(1) NOT NULL DEFAULT '0',
+  `createdAt` datetime NOT NULL,
+  `updatedAt` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
