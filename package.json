@@ -1,10 +1,11 @@
 {
-  "name": "burger",
+  "name": "hamburger",
   "version": "1.0.0",
   "description": "A Node/Express/Handlebars/Sequelize/MySQL Full Stack SPA for handling Hamburger orders.",
   "main": "server.js",
   "scripts": {
-    "test": "localhost:3000"
+    "test": "localhost:3000",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
