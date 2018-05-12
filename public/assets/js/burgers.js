@@ -12,7 +12,7 @@ $(function() {
       data: newDevouredState
     }).then(
       function() {
-        console.log("changed devoured to", newDevour);
+//        console.log("changed devoured to", newDevour);
         location.reload();
       }
     );
@@ -31,7 +31,7 @@ $(function() {
       data: newBurger
     }).then(
       function() {
-        console.log("created new burger");
+//        console.log("created new burger");
         location.reload();
       }
     );
@@ -42,7 +42,7 @@ $(function() {
       type: "DELETE"
     }).then(
       function() {
-        console.log("deleted burger", id);
+//        console.log("deleted burger", id);
         location.reload();
       }
     );

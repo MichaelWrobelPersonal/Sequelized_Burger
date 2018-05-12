@@ -9,16 +9,16 @@ module.exports = function(app) {
 
   // GET route for getting all of the burgers
   app.get("/", function(req, res) {
-    console.log("FindAll Burgers")
-    console.log(req.body);
+//    console.log("FindAll Burgers")
+//    console.log(req.body);
     // Return all entries for Burgers
     db.Burgers.findAll({raw: true}).then(function(result) {
       var hbsObject = {
         burgers: result
       };
      // Return the Burger(s) in handlebar block rendered format
-    console.log('rendered Burger response:')
-    console.log(hbsObject);
+//    console.log('rendered Burger response:')
+//    console.log(hbsObject);
     res.render("index", hbsObject);
     }).catch(function(err) {
       res.status(500).end();
@@ -28,8 +28,8 @@ module.exports = function(app) {
 
   // POST route for saving a new Burger.
   app.post("/api/burgers", function(req, res) {
-      console.log("Burger Create:");
-      console.log(req.body);
+//      console.log("Burger Create:");
+//      console.log(req.body);
       // Create the Burger
       db.Burgers.create({
         burger_name: req.body.burger_name,
@@ -45,8 +45,8 @@ module.exports = function(app) {
 
   // DELETE route for deleting Burgers
   app.delete("/api/burgers/:id", function(req, res) {
-    console.log("Burger Destroy:")
-    console.log(req.body);
+//    console.log("Burger Destroy:")
+//    console.log(req.body);
     // Specify which Burger to destroy and destroy it
     db.Burgers.destroy({
       where: {
@@ -62,8 +62,8 @@ module.exports = function(app) {
 
   // PUT route for updating burgers. The updated todo will be available in req.body
   app.put("/api/burgers/:id", function(req, res) {
-    console.log("Burger Update:")
-    console.log(req.body);
+//    console.log("Burger Update:")
+//    console.log(req.body);
     db.Burgers.update({
       devoured: req.body.devoured
       }, {
