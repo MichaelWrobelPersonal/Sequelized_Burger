@@ -1,10 +1,12 @@
 # Sequelized_Burger
 
+# Description
+
 A Node/Express/Handlebar Full Stack SPA Hamburger Ordering Application using the Sequelizer ORM
 
 # Deployed site
-[Sequelized-Burger]
-https://gentle-escarpment-74556.herokuapp.com
+
+[Sequelized-Burger]https://gentle-escarpment-74556.herokuapp.com
 
 # Technology Details
 
